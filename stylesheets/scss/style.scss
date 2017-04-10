@@ -1,0 +1,460 @@
+/*-------------------------------------*\
+      Layout and helpers
+      helpers.css
+\*-------------------------------------*/
+
+.row {
+  display: flex;
+  flex-direction:  column;
+  justify-content: space-between;
+}
+
+.row--gray {
+  background-color: #eeeeee;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+@media screen and (min-width: 30em) {
+  .row {
+    flex-direction: row;
+  }
+
+  .row--vertical {
+    flex-direction: column;
+  }
+}
+  
+.visually-hidden {
+  font-size: 0;
+  visibility:hidden;
+}
+
+.btn {
+  border: 0;
+  background-color: #81b3d2;
+  color: #fff;
+  margin: 0.2rem;
+}
+
+/*-------------------------------------*\
+      Menu
+      menu.css
+\*-------------------------------------*/
+
+.menu {
+  height: 56px;
+}
+
+.menu__list {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+
+}
+
+.menu__item {
+  flex: 1 1 auto;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: block;
+  list-style: none;
+  text-align: center;
+}
+
+
+
+/*-------------------------------------*\
+      Masthead
+      masthead.css
+\*-------------------------------------*/
+
+.masthead {
+  background-image: url("http://anna-v.github.io/sedona/img/index-bgr1200.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  height: 60vw;
+}
+
+
+
+/*-------------------------------------*\
+      Teaser
+      teaser.css
+\*-------------------------------------*/
+
+.teaser {
+  margin-bottom: 4rem;
+  margin-top:    4rem;
+  text-align:   center;    
+}
+
+.teaser__header {
+  font-size:     1.33rem;
+  padding-left:  0.6rem;
+  padding-right: 0.6rem;
+}
+
+.teaser__text {
+  display:      block;
+  font-size:    0.9rem;
+  padding-top:  1rem;
+  text-align:   center;  
+}
+
+
+
+/*-------------------------------------*\
+      Offers
+      offers.css
+\*-------------------------------------*/
+
+.offers {
+  margin-bottom: 4rem;
+  margin-top:    4rem;  
+}
+
+
+
+/*-------------------------------------*\
+      Main
+      main.css
+\*-------------------------------------*/
+
+.main {}
+
+.main__image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.main__image--sedona-streets {
+  background-image: url("http://anna-v.github.io/sedona/img/promo-img-1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35vw;
+  min-height: 15rem;
+}
+
+.main__image--diablo-bridge {
+  background-image: url("http://anna-v.github.io/sedona/img/promo-img-2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35vw;
+  min-height: 15rem;
+}
+
+.main__header {
+  margin-bottom: 0.7rem;
+  margin-left:   0.4rem;
+  margin-right:  0.4rem;
+  margin-top:    1.4rem;
+  text-align: center;
+}
+
+.main__text {
+  display:       block;
+  font-size:     0.9rem;
+  margin-bottom: 1.4rem;
+  margin-top:    0.7rem;
+  text-align:    center;
+}
+
+.main__sequence {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+  margin-top:    0.7rem;
+  text-align: center;
+}
+
+.main__sequence::before,
+.main__sequence::after {
+  content: "\2014";
+  margin-left:  0.4rem;
+  margin-right: 0.4rem;
+}
+
+
+
+/*-------------------------------------*\
+      Search form
+      search.css
+\*-------------------------------------*/
+
+.search-form {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.search-form__teaser {}
+
+.search-form__text {
+  display: block;
+}
+
+.search-form__title {}
+
+.search-form__wrapper {
+  background-image: url("http://anna-v.github.io/sedona/img/index-map.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 15vw;
+}
+
+.search-form__body {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  width: 70%;
+  height: 70%;
+}
+
+.search-form__label {
+  padding-right: 0.3rem;
+  text-align: right;
+}
+
+.search-form__label--m {
+  flex: 1 1 32%;
+}
+
+.search-form__input {
+}
+
+.search-form__input--l {
+  flex: 2 2 67%;
+}
+
+@media screen and (min-width: 30em) {
+
+    .search-form__label--sm {
+      flex: 1 1 22%;
+      min-width: 22%;
+    }
+
+    .search-form__input--sm {
+      flex: 1 1 24%;
+      min-width: 22%;
+    }
+}
+
+
+
+/*-------------------------------------*\
+      Footer
+      footer.css
+\*-------------------------------------*/
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 120px;
+  width: 100%;
+}
+
+.footer__col {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+.footer__copyright {}
+
+
+
+/*-------------------------------------*\
+      Social
+      social.css
+\*-------------------------------------*/
+
+.social {
+  background-image: url("http://anna-v.github.io/sedona/img/footer-icons.png");
+  background-repeat: no-repeat;
+  height: 48px;
+  width: 46px;
+}
+
+.social__twitter {
+  background-position: 0 0;
+}
+
+.social__facebook {
+  background-position: -46px 0;
+}
+
+.social__youtube {
+  background-position: -92px 0;
+}
+
+
+
+/*-------------------------------------*\
+      Media box
+      media.css
+\*-------------------------------------*/
+
+.media {
+  display: flex;
+  flex: 1 1 33%;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 30em) {
+
+  .media {
+    flex-direction: row;
+  }
+}
+
+.media--vertical {
+  flex-direction: column;
+}
+
+.media__body {
+  display: flex;
+  flex: 1 1 33%;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.media__object {
+  display: flex;
+  justify-content: center;
+  flex:2 2 67%;
+} 
+
+.media__body--color-blue {
+ background: #81b3d2; 
+ color: #fff;
+}
+
+.media__header {
+  margin-bottom: 0.7rem;
+  margin-left:   auto;
+  margin-right:  auto;
+  margin-top:    1.4rem;
+  max-width:     10rem;
+  padding-left:  0.7rem;
+  padding-right: 0.7rem;
+  text-align: center;
+}
+
+.media__text {
+  display:       block;
+  font-size:     0.9rem;
+  margin-bottom: 1.4rem;
+  margin-top:    0.7rem;
+  text-align:    center;
+}
+
+.media__sequence {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+  margin-top:    0.7rem;
+  text-align: center;
+}
+
+.media__sequence::before,
+.media__sequence::after {
+  content: "\2014";
+  margin-left:  0.4rem;
+  margin-right: 0.4rem;
+}
+
+
+
+/*-------------------------------------*\
+      Icons
+      icon.css
+\*-------------------------------------*/
+
+.icon {
+  background-image: url("http://anna-v.github.io/sedona/img/promo-icons.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 76px;
+  width: 76px;
+}
+
+.icon__accomodations {
+  background-position: 0 0;
+}
+
+.icon__cafes {
+  background-position: calc(-76px * 1) 0;  
+}
+
+.icon__presents {
+  background-position: calc(-76px * 2) 0;    
+}
+
+
+
+/*-------------------------------------*\
+      CSS reset and utils
+      settings.css
+\*-------------------------------------*/
+
+/*
+* {
+  border: 1px solid red;
+}
+*/
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body, nav, section, footer, div, ul, li, h1, h2, h3, img, span {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: PT Sans, Lato, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 40em) {
+  body {
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  span {
+    display: block;
+  }  
+}
+
+root {
+  --font__header: 1.33rem;
+  --font__main:   0.9rem;
+  --color--blue: #81b3d2;
+}

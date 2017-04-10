@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style.min.css" />
+		<meta charset="UTF-8">
+		<title>Welcome to the Sedona</title>
+	</head>
+<body>
+ <nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__item">Информация</li>  
+      <li class="menu__item">Фото и видео</li>  
+      <li class="menu__item">Карта штата</li>  
+      <li class="menu__item">Гостиницы</li>  
+    </ul>
+  </nav>
+  <header class="masthead">
+    <h1 class="visually-hidden">Welcome to the gorgeous Sedona</h1>
+    <span class="visually-hidden">Because the Grand Canyon sucks!</span>
+  </header>
+
+  <section class="main">
+
+    <header class="row  row--vertical  teaser">
+      <h2 class="teaser__header"><span>Седона &mdash; небольшой городок в Аризоне,</span>  <span>заслуживающий большего</span></h2>
+      <span class="teaser__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</span>
+    </header>
+
+    <div class="row">
+      <div class="media">
+        
+        <div class="media__body  media__body--color-blue">
+          <h3 class="media__header">Настоящий городок</h3>
+          <span class="media__sequence">№1</span>
+          <p class="media__text"><span>Седона - не аттракцион для туристов,</span> <span>там течет своя жизнь</span></p>
+        </div>
+
+        <div class="media__object">
+          <div class="main__image  main__image--sedona-streets" role="image" aria-label="Улицы Седоны"></div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="row  offers">
+      <div class="media  media--vertical">
+        <div class="media__object">
+          <div class="icon  icon__accomodations" role="image" aria-label="Жилье - иконка"></div>
+        </div>
+        
+        <div class="media__body">
+          <h3 class="main__header">Жилье</h3>
+          <p class="main__text"><span>Рекомендуем пожить в настоящем мотеле,</span> <span>все как в кино!</span></p>
+        </div>
+      </div>
+
+      <div class="media  media--vertical">        
+        <div class="media__object">
+          <div class="icon  icon__cafes" role="image" aria-label="Еда - иконка"></div>
+        </div>
+        
+        <div class="media__body">
+          <h3 class="main__header">Еда</h3>
+          <p class="main__text"><span>Всегда заказывайте фирменный бургер,</span> <span>Вы не разочаруетесь!</span></p>
+        </div>
+      </div>
+
+      <div class="media  media--vertical">
+        <div class="media__object">
+          <div class="icon  icon__presents" role="image" aria-label="Сувениры - иконка"></div>
+        </div>
+        
+        <div class="media__body">
+          <h3 class="main__header">Сувениры</h3>
+          <p class="main__text"><span>Не только китайского,</span> <span>но и местного производства!</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="media">
+
+        <div class="media__object">
+          <div class="main__image  main__image--diablo-bridge" role="image" aria-label="Мост дьявола"></div>
+        </div>
+
+        <div class="media__body  media__body--color-blue">
+          <h3 class="media__header">Там есть Мост дьявола</h3>
+          <span class="main__sequence">№2</span>
+          <p class="media__text"><span>Да, по нему можно пройти!</span> <span>Если конечно вы осмелитесь</span></p>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="row row--gray">
+      <div class="media  media--vertical">
+        <div class="media__body">
+          <h3 class="main__header">Небольшая площадь</h3>
+          <span class="main__sequence">№3</span>
+          <p class="main__text"><span>Все достопримечательности</span> <span>находятся очень близко</span></p>
+        </div>
+      </div>
+
+      <div class="media  media--vertical">
+        <div class="media__body">
+          <h3 class="main__header">Красивая дорога</h3>
+          <span class="main__sequence">№4</span>
+          <p class="main__text"><span>Ехать в Седону из Лас-Вегаса совсем</span> <span>не скучно!</span></p>
+        </div>
+      </div>
+
+      <div class="media  media--vertical">
+        <div class="media__body">
+          <h3 class="main__header">Мало туристов</h3>
+          <span class="main__sequence">№5</span>
+          <p class="main__text"><span>Большинство едет в гранд каньон и</span> <span>толпится там</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-form">
+    <h2 class="search-form__teaser">Заинтересовались?</h2>
+    <p class="search-form__text"><span>Укажите предполагаемые даты поездки,</span> <span>и мы покажем вам лучшие предложения гостиниц в Седоне</span></p>
+    <h3 class="search-form__title">Поиск гостиницы в Седоне</h3>
+    <div class="search-form__wrapper">
+      <form class= "search-form__body" action="/">
+        <label class="search-form__label  search-form__label--m" for="check-in-date">Дата заезда:</label>
+        <input class="search-form__input  search-form__input--l" type="date" id="check-in-date" name="check-in-date" />
+
+        <label class="search-form__label  search-form__label--m" for="check-out-date">Дата выезда:</label>
+        <input class="search-form__input  search-form__input--l" type="date" id="check-out-date" name="check-out-date" />
+
+        <label class="search-form__label  search-form__label--m  search-form__label--sm" for="adults_number">Взрослые:</label>
+        <input class="search-form__input  search-form__input--l  search-form__input--sm" type="number" id="adults_number" name="adults_number" />
+
+        <label class="search-form__label  search-form__label--m  search-form__label--sm" for="children_number">Дети:</label>
+        <input class="search-form__input  search-form__input--l  search-form__input--sm" type="number" id="adults_number" name="adults_number" />
+        <button class="btn">Найти</button>
+      </form>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__col  social__instagram">#VISITSEDONA</div>
+    <div class="footer__col">
+      <div class="btn  social  social__twitter"  role="image" aria-label="twitter-button"></div>
+      <div class="btn  social  social__facebook" role="image" aria-label="facebook-button"></div>
+      <div class="btn  social  social__youtube"  role="image" aria-label="youtube-button"></div>
+    </div>
+    <div class="footer__col  footer__copyright">Made by</div>
+  </footer>
+</body>
+</html>
