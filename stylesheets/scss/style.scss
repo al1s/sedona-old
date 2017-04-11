@@ -34,7 +34,8 @@
   border: 0;
   background-color: #81b3d2;
   color: #fff;
-  margin: 0.2rem;
+  margin: 0;
+  padding: 0;
 }
 
 /*-------------------------------------*\
@@ -199,55 +200,88 @@
   display: block;
 }
 
-.search-form__title {}
+.search-form__title {
+  background-color: #766357; 
+}
 
 .search-form__wrapper {
   background-image: url("http://anna-v.github.io/sedona/img/index-map.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0 15vw;
+}
+
+.search-form__container {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 3rem;
 }
 
 .search-form__body {
   align-items: center;
-  background-color: #fff;
-  display: flex;
+  display:   flex;
   flex-wrap: wrap;
-  padding-bottom: 10rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  width: 70%;
-  height: 70%;
+  width: 100%;
 }
 
 .search-form__label {
-  padding-right: 0.3rem;
-  text-align: right;
-}
-
-.search-form__label--m {
-  flex: 1 1 32%;
+  padding-right: 0.5rem;
+  text-align:    left;
 }
 
 .search-form__input {
+  background-color: #f2f2f2; 
+  border:     none;
+  box-shadow: none;
+  font-family: inherit;
+  font-size:     1rem;
+  height:        2.4em;
+  margin-bottom: 0.7rem;
+  margin-top:    0.7rem;
 }
 
-.search-form__input--l {
-  flex: 2 2 67%;
+.search-form__submit {
+  font-size: inherit;
+  height: 3rem;
+  margin-top: 3rem;
+  text-transform: inherit;
+  width: 100%;
 }
+
+.search-form__label--size-m {
+  flex: 1 1 24%;
+}
+
+.search-form__input--size-l {
+  flex: 2 2 75%;
+}
+
+@media screen and (min-width: 35em) {
+
+    .search-form__container {
+      width: 35rem;
+    }
+    .search-form__title {
+      color: #fff;
+      margin-left:  auto;
+      margin-right: auto;
+      margin-top:   0;
+      padding:      2rem;
+      width: 35rem;
+    }
+
+  }
 
 @media screen and (min-width: 30em) {
 
-    .search-form__label--sm {
-      flex: 1 1 22%;
-      min-width: 22%;
+    .search-form__label--size-sm {
+      flex:  1 1 24%;
+      min-width: 24%;
     }
 
-    .search-form__input--sm {
-      flex: 1 1 24%;
-      min-width: 22%;
+    .search-form__input--size-sm {
+      flex:  1 1 25%;
+      min-width: 25%;
     }
 }
 

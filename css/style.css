@@ -26,7 +26,8 @@
   border: 0;
   background-color: #81b3d2;
   color: #fff;
-  margin: 0.2rem; }
+  margin: 0;
+  padding: 0; }
 
 /*-------------------------------------*      Menu
       menu.css
@@ -154,43 +155,61 @@
 .search-form__text {
   display: block; }
 
+.search-form__title {
+  background-color: #766357; }
+
 .search-form__wrapper {
   background-image: url("http://anna-v.github.io/sedona/img/index-map.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
-  padding: 0 15vw; }
+  background-size: cover; }
+
+.search-form__container {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 3rem; }
 
 .search-form__body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-bottom: 10rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  width: 70%;
-  height: 70%; }
+  width: 100%; }
 
 .search-form__label {
-  padding-right: 0.3rem;
-  text-align: right; }
+  padding-right: 0.5rem;
+  text-align: left; }
 
-.search-form__label--m {
+.search-form__input {
+  background-color: #f2f2f2;
+  border: none;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 1rem;
+  height: 2.4em;
+  margin-bottom: 0.7rem;
+  margin-top: 0.7rem; }
+
+.search-form__submit {
+  font-size: inherit;
+  height: 3rem;
+  margin-top: 3rem;
+  text-transform: inherit;
+  width: 100%; }
+
+.search-form__label--size-m {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 32%;
-          flex: 1 1 32%; }
+      -ms-flex: 1 1 24%;
+          flex: 1 1 24%; }
 
-.search-form__input--l {
+.search-form__input--size-l {
   -webkit-box-flex: 2;
-      -ms-flex: 2 2 67%;
-          flex: 2 2 67%; }
+      -ms-flex: 2 2 75%;
+          flex: 2 2 75%; }
 
 /*-------------------------------------*      Footer
       footer.css
@@ -377,21 +396,32 @@ root {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-  .search-form__label--sm {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 22%;
-    flex: 1 1 22%;
-    min-width: 22%; }
-  .search-form__input--sm {
+  .search-form__label--size-sm {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 24%;
     flex: 1 1 24%;
-    min-width: 22%; }
+    min-width: 24%; }
+  .search-form__input--size-sm {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 25%;
+    flex: 1 1 25%;
+    min-width: 25%; }
   .media {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row; } }
+
+@media screen and (min-width: 35em) {
+  .search-form__container {
+    width: 35rem; }
+  .search-form__title {
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    padding: 2rem;
+    width: 35rem; } }
 
 @media screen and (min-width: 40em) {
   body {

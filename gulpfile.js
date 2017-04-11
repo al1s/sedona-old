@@ -37,15 +37,15 @@ const reload = browserSync.reload;
 
 /* Setup scss path */
 var paths = {
-    scss: './sass/*.scss'
+  scss: ['./sass/*.scss', './sass/*.css']
 };
 
 /* Scripts task */
 gulp.task('scripts', function() {
   return gulp.src([
     /* Add your JS files here, they will be combined in this order */
-    'js/vendor/jquery-1.11.1.js',
-    'js/app.js'
+    './js/vendor/jquery-1.11.1.js',
+    './js/app.js'
     ])
     .pipe(concat('main.js'))
     .pipe(gulp.dest('js'))
@@ -56,7 +56,7 @@ gulp.task('scripts', function() {
 
 /* Sass task */
 gulp.task('sass', function () {  
-    gulp.src('./stylesheets/scss/style.scss')
+    gulp.src(['./stylesheets/scss/style.scss', './stylesheets/scss/*.css'])
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -82,7 +82,7 @@ gulp.task('bs-reload', function () {
 
 /* Prepare Browser-sync for localhost */
 gulp.task('browser-sync', function() {
-    browserSync.init(['css/*.css', 'js/*.js'], {
+    browserSync.init(['./css/*.css', './js/*.js'], {
         /*
         I like to use a vhost, WAMP guide: https://www.kristengrote.com/blog/articles/how-to-set-up-virtual-hosts-using-wamp, XAMP guide: http://sawmac.com/xampp/virtualhosts/
         */
@@ -101,7 +101,7 @@ gulp.task('default', ['sass', 'browser-sync'], function () {
     /* Watch scss, run the sass task on change. */
     gulp.watch(['./stylesheets/scss/*.scss', './stylesheets/scss/**/*.scss'], ['sass'])
     /* Watch app.js file, run the scripts task on change. */
-    gulp.watch(['js/app.js'], ['scripts'])
+    gulp.watch(['./js/app.js'], ['scripts'])
     /* Watch .html files, run the bs-reload task on change. */
-    gulp.watch(['*.html'], ['bs-reload']);
+    gulp.watch(['./*.html'], ['bs-reload']);
 });
