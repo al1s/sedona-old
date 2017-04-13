@@ -189,7 +189,6 @@
 \*-------------------------------------*/
 
 .search-form {
-  margin-bottom: 2rem;
   margin-top: 2rem;
   text-align: center;
 }
@@ -209,6 +208,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 180px;
 }
 
 .search-form__container {
@@ -225,6 +225,7 @@
 }
 
 .search-form__label {
+  font-weight: bold;
   padding-right: 0.5rem;
   text-align:    left;
 }
@@ -293,12 +294,17 @@
 \*-------------------------------------*/
 
 .footer {
-  background-color: rgba(255, 255, 255, 0.3);
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
   height: 120px;
+  justify-content: space-around;
+  margin-top: -120px;
   width: 100%;
+  z-index: 1;
 }
 
 .footer__col {
@@ -307,7 +313,10 @@
   flex: 1 1 auto;
 }
 
-.footer__copyright {}
+.footer__copyright {
+  font-size: 1rem;
+  font-weight: normal;
+}
 
 
 
@@ -320,6 +329,8 @@
   background-image: url("http://anna-v.github.io/sedona/img/footer-icons.png");
   background-repeat: no-repeat;
   height: 48px;
+  margin-left:  0.1rem;
+  margin-right: 0.1rem;
   width: 46px;
 }
 
@@ -328,11 +339,11 @@
 }
 
 .social__facebook {
-  background-position: -46px 0;
+  background-position: -47px 0;
 }
 
 .social__youtube {
-  background-position: -92px 0;
+  background-position: -94px 0;
 }
 
 

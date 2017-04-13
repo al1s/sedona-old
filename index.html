@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.datepick.min.css"> 
 		<meta charset="UTF-8">
 		<title>Welcome to the Sedona</title>
 	</head>
@@ -130,10 +131,10 @@
       <div class="search-form__container">
         <form class= "search-form__body" action="/">
           <label class="search-form__label  search-form__label--size-m" for="check-in-date">Дата заезда:</label>
-          <input class="search-form__input  search-form__input--size-l" type="date" id="check-in-date" name="check-in-date" />
+          <input class="search-form__input  search-form__input--size-l  is-datepick" type="text" id="check-in-date" name="check-in-date" />
 
           <label class="search-form__label  search-form__label--size-m" for="check-out-date">Дата выезда:</label>
-          <input class="search-form__input  search-form__input--size-l" type="date" id="check-out-date" name="check-out-date" />
+          <input class="search-form__input  search-form__input--size-l  is-datepick" type="text" id="check-out-date" name="check-out-date" />
 
           <label class="search-form__label  search-form__label--size-m  search-form__label--size-sm" for="adults_number">Взрослые:</label>
           <input class="search-form__input  search-form__input--size-l  search-form__input--size-sm" type="number" id="adults_number" name="adults_number" />
@@ -154,5 +155,15 @@
     </div>
     <div class="footer__col  footer__copyright">Made by</div>
   </footer>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.plugin.js"></script> 
+  <script type="text/javascript" src="js/jquery.datepick.js"></script>
+  <script type="text/javascript" src="js/app.min.js"></script>
+  <script>
+    $( document ).ready(function() {
+      $(".footer__copyright").text("Created with JS");
+      $(".is-datepick").datepick();
+    });
+  </script>    
 </body>
 </html>

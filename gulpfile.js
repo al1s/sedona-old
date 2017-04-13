@@ -1,5 +1,5 @@
 /*
-Gulpfile.js file for the tutorial:
+Based on the Gulpfile.js for this tutorial:
 Using Gulp, SASS and Browser-Sync for your front end web development - DESIGNfromWITHIN
 http://designfromwithin.com/blog/gulp-sass-browser-sync-front-end-dev
 
@@ -8,10 +8,13 @@ Steps:
 1. Install gulp globally:
 npm install --global gulp
 
-2. Type the following after navigating in your project folder:
-npm install gulp gulp-util gulp-sass gulp-uglify gulp-rename gulp-minify-css gulp-notify gulp-concat gulp-plumber browser-sync --save-dev
+2. Place this file into project forlder.
 
-3. Move this file in your project folder
+3. Run:
+npm init
+to create package.js. It will contain all required modules from gulpfile.json.
+
+.... PROFIT?
 
 4. Setup your vhosts or just use static server (see 'Prepare Browser-sync for localhost' below)
 
@@ -34,6 +37,8 @@ const mqpacker = require('css-mqpacker');
 const autoprefixer = require('autoprefixer')
 const sourcemaps = require('gulp-sourcemaps');
 const reload = browserSync.reload;
+const jshint = require('gulp-jshint');
+const stylish = require('jshint-stylish');
 
 /* Setup scss path */
 var paths = {
@@ -44,10 +49,15 @@ var paths = {
 gulp.task('scripts', function() {
   return gulp.src([
     /* Add your JS files here, they will be combined in this order */
-    './js/vendor/jquery-1.11.1.js',
-    './js/app.js'
+    './js/*.js',
+    './js/app.js',
+    '!./js/main.js',
+    '!./js/*.min.js'
     ])
-    .pipe(concat('main.js'))
+    .pipe(jshint())
+  //.pipe(jshint.reporter('default'))
+    .pipe(jshint.reporter(stylish))
+    .pipe(jshint.reporter('fail'))
     .pipe(gulp.dest('js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
@@ -96,12 +106,23 @@ gulp.task('browser-sync', function() {
     });
 });
 
+/* Extract js from HTML and lint it */
+gulp.task('lintHTML', function() {
+  return gulp.src('./*.html')
+    // if flag is not defined default value is 'auto'
+    // .pipe(jshint.extract('auto|always|never'))
+    .pipe(jshint.extract('auto'))
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+    .pipe(jshint.reporter('fail'));
+});
+
 /* Watch scss, js and html files, doing different things with each. */
 gulp.task('default', ['sass', 'browser-sync'], function () {
     /* Watch scss, run the sass task on change. */
     gulp.watch(['./stylesheets/scss/*.scss', './stylesheets/scss/**/*.scss'], ['sass'])
     /* Watch app.js file, run the scripts task on change. */
-    gulp.watch(['./js/app.js'], ['scripts'])
+    gulp.watch(['./js/*.js'], ['scripts'])
     /* Watch .html files, run the bs-reload task on change. */
     gulp.watch(['./*.html'], ['bs-reload']);
 });
