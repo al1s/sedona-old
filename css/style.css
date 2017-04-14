@@ -61,10 +61,12 @@
       masthead.css
 \*-------------------------------------*/
 .masthead {
-  background-image: url("http://anna-v.github.io/sedona/img/index-bgr1200.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 110%;
+  background-image: url("../img/masthead__shape.png"), url("../img/masthead__main.jpg");
+  background-position: center bottom, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%, 110%;
+  border: 0;
+  font-size: 0;
   height: 60vw; }
 
 /*-------------------------------------*      Teaser
@@ -155,7 +157,9 @@
   display: block; }
 
 .search-form__title {
-  background-color: #766357; }
+  background-color: #766357;
+  color: #fff;
+  padding: 2rem; }
 
 .search-form__wrapper {
   background-image: url("http://anna-v.github.io/sedona/img/index-map.jpg");
@@ -165,7 +169,7 @@
   padding-bottom: 180px; }
 
 .search-form__container {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   margin: 0 auto;
   padding: 3rem; }
 
@@ -256,8 +260,8 @@
   background-image: url("http://anna-v.github.io/sedona/img/footer-icons.png");
   background-repeat: no-repeat;
   height: 48px;
-  margin-left: 0.1rem;
-  margin-right: 0.1rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
   width: 46px; }
 
 .social__twitter {
@@ -278,13 +282,15 @@
   display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 33%;
-          flex: 1 1 33%;
+          flex: 1 1 33%; }
+
+.media--vertical {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
 
-.media--vertical {
+.media--direction {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -385,13 +391,17 @@ html {
 *, *::before, *::after {
   box-sizing: inherit; }
 
-html, body, nav, section, footer, div, ul, li, h1, h2, h3, img, span {
+html, body, nav, section, footer, div, ul, li, h1, h2, h3, img {
   margin: 0;
   padding: 0; }
 
 body {
   font-family: PT Sans, Lato, Arial, sans-serif;
   text-transform: uppercase; }
+
+h1, h2, p {
+  padding-left: 1rem;
+  padding-right: 1rem; }
 
 root {
   --font__header: 1.33rem;
@@ -419,21 +429,22 @@ root {
     -ms-flex: 1 1 25%;
     flex: 1 1 25%;
     min-width: 25%; }
-  .media {
+  .media--direction {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    flex-direction: row; } }
+    flex-direction: row; }
+  h1, h2, span, p {
+    padding-left: 0;
+    padding-right: 0; } }
 
 @media screen and (min-width: 35em) {
   .search-form__container {
     width: 35rem; }
   .search-form__title {
-    color: #fff;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
-    padding: 2rem;
     width: 35rem; } }
 
 @media screen and (min-width: 40em) {

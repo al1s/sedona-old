@@ -39,6 +39,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const reload = browserSync.reload;
 const jshint = require('gulp-jshint');
 const stylish = require('jshint-stylish');
+const changed = require('gulp-changed');
 
 /* Setup scss path */
 var paths = {
@@ -54,6 +55,7 @@ gulp.task('scripts', function() {
     '!./js/main.js',
     '!./js/*.min.js'
     ])
+    .pipe(changed('js'))
     .pipe(jshint())
   //.pipe(jshint.reporter('default'))
     .pipe(jshint.reporter(stylish))
@@ -67,6 +69,7 @@ gulp.task('scripts', function() {
 /* Sass task */
 gulp.task('sass', function () {  
     gulp.src(['./stylesheets/scss/style.scss', './stylesheets/scss/*.css'])
+    .pipe(changed('stylesheets'))
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -113,7 +116,7 @@ gulp.task('lintHTML', function() {
     // .pipe(jshint.extract('auto|always|never'))
     .pipe(jshint.extract('auto'))
     .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+    .pipe(jshint.reporter('default'))
     .pipe(jshint.reporter('fail'));
 });
 

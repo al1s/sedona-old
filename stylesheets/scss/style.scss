@@ -72,10 +72,12 @@
 \*-------------------------------------*/
 
 .masthead {
-  background-image: url("http://anna-v.github.io/sedona/img/index-bgr1200.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 110%;
+  background-image: url("../img/masthead__shape.png"), url("../img/masthead__main.jpg");
+  background-position: center bottom, center center; 
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%, 110%;
+  border: 0;
+  font-size: 0;
   height: 60vw;
 }
 
@@ -201,6 +203,8 @@
 
 .search-form__title {
   background-color: #766357; 
+  color: #fff;
+  padding: 2rem;
 }
 
 .search-form__wrapper {
@@ -212,7 +216,7 @@
 }
 
 .search-form__container {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   margin: 0 auto;
   padding: 3rem;
 }
@@ -263,11 +267,9 @@
       width: 35rem;
     }
     .search-form__title {
-      color: #fff;
       margin-left:  auto;
       margin-right: auto;
       margin-top:   0;
-      padding:      2rem;
       width: 35rem;
     }
 
@@ -329,8 +331,8 @@
   background-image: url("http://anna-v.github.io/sedona/img/footer-icons.png");
   background-repeat: no-repeat;
   height: 48px;
-  margin-left:  0.1rem;
-  margin-right: 0.1rem;
+  margin-left:  0.2rem;
+  margin-right: 0.2rem;
   width: 46px;
 }
 
@@ -356,18 +358,21 @@
 .media {
   display: flex;
   flex: 1 1 33%;
+}
+
+.media--vertical {
+  flex-direction: column;
+}
+
+.media--direction {
   flex-direction: column;
 }
 
 @media screen and (min-width: 30em) {
 
-  .media {
+  .media--direction {
     flex-direction: row;
   }
-}
-
-.media--vertical {
-  flex-direction: column;
 }
 
 .media__body {
@@ -471,7 +476,7 @@ html {
   box-sizing: inherit;
 }
 
-html, body, nav, section, footer, div, ul, li, h1, h2, h3, img, span {
+html, body, nav, section, footer, div, ul, li, h1, h2, h3, img {
   margin: 0;
   padding: 0;
 }
@@ -481,7 +486,22 @@ body {
   text-transform: uppercase;
 }
 
+h1, h2, p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+@media screen and (min-width: 30em) {
+
+  h1, h2, span, p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+  
 @media screen and (min-width: 40em) {
+
   body {
     margin-bottom: 0px;
     margin-left: auto;
