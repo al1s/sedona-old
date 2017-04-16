@@ -29,6 +29,14 @@
   margin: 0;
   padding: 0; }
 
+.logo {
+  background-image: url("../img/logo.gif");
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  height: 70px;
+  width: 138px; }
+
 /*-------------------------------------*      Menu
       menu.css
 \*-------------------------------------*/

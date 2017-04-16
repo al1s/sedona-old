@@ -1,0 +1,9 @@
+.something {
+  display: flex;
+  flex-direction:  column;
+  justify-content: space-between;
+  
+  &--mod {
+    display: grid;
+  }
+}
